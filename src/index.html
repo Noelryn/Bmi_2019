@@ -3,39 +3,46 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bmi Calculator</title>
     <script src="js/person.js"></script>
     <script src="js/bmi_calculator.js"></script>
 </head>
 
-<body>
-    <form id="calculate">
-        <div id="metric-inputs">
-            <input type="text" id="weight-in-kgs" placeholder="Weight">
-            <input type="text" id="height-in-cm" placeholder="Height">
-        </div>
+<body class="bg-teal-lightest py-32">
+    <h1 class=" text-center px-2 py-1 shadow-lg bg-white border border-black rounded-full font-semiboldr ">The Awesome BMI Calculator </h1>
+    <div class="py-32">
+        <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden border border-black">
+            <form class="py-16 px-16" id="calculate">
+                <div class="border-black" id="metric-inputs">
+                    <input class="border border-purple" type="text" id="weight-in-kgs" placeholder="Weight">
+                    <input class="border border-purple" type="text" id="height-in-cm" placeholder="Height">
+                </div>
 
-        <div id="imperial-inputs">
-            <input type="text" id="weight-in-lbs" placeholder="Weight">
-            <input type="text" id="height-in-in" placeholder="Height">
-        </div>
+                <div class="py-4" id="imperial-inputs">
+                    <input class="border border-purple" type="text" id="weight-in-lbs" placeholder="Weight">
+                    <input class="border border-purple" type="text" id="height-in-in" placeholder="Height">
+                </div>
 
-        <div class="form-group row">
-            <div class="col-auto">
-              <select class="form-control" id="my_select">
-                <option value="metric">Metric System</option>
-                <option value="imperial">Imperial System</option>
-              </select>
+                <div class="px-24 py-4 form-group row">
+                    <div class="col-auto">
+                    <select class="border border-purple" id="my_select">
+                        <option value="metric">Metric System</option>
+                        <option value="imperial">Imperial System</option>
+                    </select>
+                    </div>
+                </div>
+            <div class="px-32">
+                <button class="text-xs bg-white shadow-lg rounded-lg font-semiboldr rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white" type="submit" value="Calculate"> Calculate </button>
+            </div>
+        </form>
+
+            <div class=" text-center mb-4" >
+                <span class="text-xl leading-tight" id="display_value"></span>
+                <span class="text-sm leading-tight text-grey-dark" id="display_message"></span>
             </div>
         </div>
-
-        <button type="submit" value="Calculate"> Calculate </button>
-    </form>
-    <div>
-        <span id="display_value"></span>
-        <span id="display_message"></span>
     </div>
-
     <script type="text/javascript">
       
         
