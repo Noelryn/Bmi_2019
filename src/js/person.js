@@ -6,10 +6,10 @@ function Person(attrs) {
         calculator.metric_bmi(this)
     }
 
-    this.calculate_imperial_bmi  = function() {
+    Person.prototype.calculate_imperial_bmi  = function() {
         calculator = new BMICalculator();
         calculator.imperial_bmi(this);
-    }
+      };
 }
 
 if (typeof module !== 'undefined' && module.exports) {
