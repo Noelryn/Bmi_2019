@@ -7,7 +7,7 @@ function BMICalculator(){
           obj.bmiValue =  parseFloat(finalBmi.toFixed(2));
           setBMIMessage(obj);
         }
-      };
+    };
 
       BMICalculator.prototype.imperial_bmi = function(obj) {
         let weight = obj.weight;
@@ -17,7 +17,7 @@ function BMICalculator(){
               obj.bmiValue = parseFloat(finalBmi.toFixed(2));
               setBMIMessage(obj);
         }
-      };
+    };
 
       function setBMIMessage (obj){
         if (obj.bmiValue < 18.5) {
@@ -32,7 +32,7 @@ function BMICalculator(){
         if (obj.bmiValue > 30) {
           obj.bmiMessage = "Obese"
         }
-      } 
+    } 
 
 };
 
